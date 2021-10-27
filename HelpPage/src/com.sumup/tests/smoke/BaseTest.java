@@ -71,6 +71,7 @@ public class BaseTest {
             FirefoxOptions options = new FirefoxOptions();
             if (headless) {
                 options.setHeadless(true);
+                options.addArguments("User-Agent=" + Utils.getUserAgent());
             }
             driver = (WebDriver) new FirefoxDriver(options);
         }
@@ -85,6 +86,7 @@ public class BaseTest {
             EdgeOptions options = new EdgeOptions();
             if (headless) {
                 options.setHeadless(true);
+                options.addArguments("User-Agent=" + Utils.getUserAgent());
             }
             driver = (WebDriver) new EdgeDriver(options);
         }
